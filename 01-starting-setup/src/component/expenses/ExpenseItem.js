@@ -7,11 +7,13 @@ const ExpenseItem = (props) => {
     // Must have only one root element (div) within the return statement.
     // If you only need a simple div you can wrap it in an empty carrot situation
 
-    let title = props.title;
+//This does not execute because  of the way react renders initially. --- It only renders once and any updates that are done after render will not be executed unless... You use state
 
-    const clickHandler = () => {
-        title = "Updated"
-    }
+    // let title = props.title;
+    //
+    // const clickHandler = () => {
+    //     title = "Updated"
+    // }
     return (
         <Card className='expense-item'>
             <ExpenseDate date={props.date}/>
