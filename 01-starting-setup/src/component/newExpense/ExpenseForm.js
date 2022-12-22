@@ -2,10 +2,15 @@ import "./ExpenseForm.css";
 import { useState } from 'react'
 
 function ExpenseForm () {
+//  You can repeat it three separate times for state or... useState as an object as its initial value. The better more concise approach is three separate states
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
-    // const [enteredExpenseForm, setEnteredExpenseForm] = useState({})
+    // const [userInput, setUserInput] = useState({
+    //     enteredTitle: "",
+    //     enteredAmount: "",
+    //     enteredDate: ""
+    // })
     //e (event) is available automatically when we use the onChange attribute, so we just need to pass it as a param -> we can use it in the function.
     //    inside the event.target the attribute "value" holds the value at the time that the event occurs.
     const titleChangeHandler = (e) => {
@@ -41,3 +46,5 @@ function ExpenseForm () {
 }
 
 export default ExpenseForm;
+// If you are updating state, and it depends on other factors of state do NOT use the spread operator
+// instead use an arrow function and pass the previous state as the paramater
