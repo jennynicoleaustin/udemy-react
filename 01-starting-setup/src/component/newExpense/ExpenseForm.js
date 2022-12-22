@@ -32,7 +32,7 @@ function ExpenseForm() {
         }
 
         console.log(expenseData)
-
+    // Two-way binding = add the value attribute to the input
     }
     return (
         // Add the onsubmit event to the overall form so that the submit button will trigger the event inside "onSubmit"
@@ -41,7 +41,7 @@ function ExpenseForm() {
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
-                    <input type='text' onChange={titleChangeHandler}/>
+                    <input type='text' value={enteredTitle} onChange={titleChangeHandler}/>
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
