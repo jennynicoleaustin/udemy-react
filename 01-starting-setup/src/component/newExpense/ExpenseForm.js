@@ -32,7 +32,10 @@ function ExpenseForm() {
         }
 
         console.log(expenseData)
-    // Two-way binding = add the value attribute to the input
+    // Two-way binding = add the value attribute to the input allows you to clear the inputs after setting them using the below methods
+        setEnteredTitle('')
+        setEnteredAmount('')
+        setEnteredDate('')
     }
     return (
         // Add the onsubmit event to the overall form so that the submit button will trigger the event inside "onSubmit"
