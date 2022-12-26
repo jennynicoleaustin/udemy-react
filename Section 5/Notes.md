@@ -8,4 +8,7 @@ Key prop (Expenses.js)
 
 Conditional Output
 - long for or if statements are not allowed inside the {}
-- 
+
+Dynamically render a style 
+- style={{}} <-- style expects an object.
+- see ChartBar 
