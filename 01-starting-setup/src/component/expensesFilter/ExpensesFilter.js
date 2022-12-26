@@ -23,3 +23,6 @@ const ExpensesFilter = (props) => {
 };
 
 export default ExpensesFilter;
+
+//When the logic for the component lies outside the component in the parent component it is referred to as a controlled component
+//    value and changes to the value are handled in the parent component
