@@ -25,10 +25,14 @@ const App = () => {
         },
     ];
 
-
+    const addExpenseHandler = expense => {
+        console.log('In App.js')
+        console.log(expense)
+    }
+    // the "on" in the function name indicates that it's a pointer to another function
     return (
         <div>
-            <NewExpense />
+            <NewExpense onAddExpense={addExpenseHandler} />
             <Expenses items={expenses} />
         </div>
     );
