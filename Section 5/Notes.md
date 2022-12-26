@@ -5,3 +5,7 @@ Key prop (Expenses.js)
 - key helps react identify the individual items
 - must set a unique value for each item in the array (id)
   - id can be any primitive value. 
+
+Conditional Output
+- long for or if statements are not allowed inside the {}
+- 
