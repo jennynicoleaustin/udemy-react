@@ -1,7 +1,7 @@
 import "./ExpenseForm.css";
 import {useState} from 'react'
 
-function ExpenseForm() {
+function ExpenseForm(props) {
     //  You can repeat it three separate times for state or... useState as an object as its initial value. The better more concise approach is three separate states
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
@@ -31,8 +31,8 @@ function ExpenseForm() {
             date: new Date(enteredDate)
         }
 
-        console.log(expenseData)
-    // Two-way binding = add the value attribute to the input allows you to clear the inputs after setting them using the below methods
+        props.onSaveExpenseData();
+        // Two-way binding = add the value attribute to the input allows you to clear the inputs after setting them using the below methods
         setEnteredTitle('')
         setEnteredAmount('')
         setEnteredDate('')
