@@ -3,26 +3,27 @@ import React, {useState, useEffect, useReducer} from 'react';
 import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
+import AuthContext from '../../store/auth-context';
 
 // This is defined outside the main component, because there is no data that is generated inside of Login, that the emailReducer needs.
 const emailReducer = (state, action) => {
     if (action.type === 'USER_INPUT') {
-        return {value: action.val, isValid: action.val.includes('@')};
+    return { value: action.val, isValid: action.val.includes('@') };
     }
     if (action.type === 'INPUT_BLUR') {
-        return {value: state.value, isValid: state.value.includes('@')};
+    return { value: state.value, isValid: state.value.includes('@') };
     }
-    return {value: '', isValid: false};
+  return { value: '', isValid: false };
 };
 
 const passwordReducer = (state, action) => {
     if (action.type === 'USER_INPUT') {
-        return {value: action.val, isValid: action.val.trim().length > 6};
+    return { value: action.val, isValid: action.val.trim().length > 6 };
     }
     if (action.type === 'INPUT_BLUR') {
-        return {value: state.value, isValid: state.value.trim().length > 6};
+    return { value: state.value, isValid: state.value.trim().length > 6 };
     }
-    return {value: '', isValid: false};
+  return { value: '', isValid: false };
 };
 
 const Login = (props) => {
@@ -38,6 +39,8 @@ const Login = (props) => {
         isValid: null,
     });
 
+  const authCtx = useContext(AuthContext);
+
     useEffect(() => {
         console.log('EFFECT RUNNING');
 
@@ -46,9 +49,8 @@ const Login = (props) => {
         };
     }, []);
 
-    // right side of colon = the alias you are assigning.
-    const {isValid: emailIsValid} = emailState;
-    const {isValid: passwordIsValid} = passwordState;
+  const { isValid: emailIsValid } = emailState;
+  const { isValid: passwordIsValid } = passwordState;
 
     useEffect(() => {
         const identifier = setTimeout(() => {
@@ -63,24 +65,24 @@ const Login = (props) => {
     }, [emailIsValid, passwordIsValid]);
 
     const emailChangeHandler = (event) => {
-        dispatchEmail({type: 'USER_INPUT', val: event.target.value});
+    dispatchEmail({ type: 'USER_INPUT', val: event.target.value });
     };
 
     const passwordChangeHandler = (event) => {
-        dispatchPassword({type: 'USER_INPUT', val: event.target.value});
+    dispatchPassword({ type: 'USER_INPUT', val: event.target.value });
     };
 
     const validateEmailHandler = () => {
-        dispatchEmail({type: 'INPUT_BLUR'});
+    dispatchEmail({ type: 'INPUT_BLUR' });
     };
 
     const validatePasswordHandler = () => {
-        dispatchPassword({type: 'INPUT_BLUR'});
+    dispatchPassword({ type: 'INPUT_BLUR' });
     };
 
     const submitHandler = (event) => {
         event.preventDefault();
-        props.onLogin(emailState.value, passwordState.value);
+    authCtx.onLogin(emailState.value, passwordState.value);
     };
 
     return (
