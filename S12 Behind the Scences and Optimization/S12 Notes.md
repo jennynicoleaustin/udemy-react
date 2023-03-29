@@ -24,3 +24,12 @@ V. 153 Child Component Re-rendering
 React.memo (DemoOutput)
 - wrap all children in this, and you will only re-render the children if an element within the children has changed. 
   - use of this comes with a cost -- only really useful if you have a huge children prop change. 
+
+V. 155 Preventing Function re-creation with useCallback()
+-  for memo to work on objects as well as primitive types
+useCallback()
+- allows us to store a function across components. 
+- tell it that the function should not be recreated with every execution
+- stores the function in react memory and calls on that specific function when it needs to be reused rather than needing to recreate it every time. 
+How to use it? 
+- pass out function as a first argument to the useCallback function

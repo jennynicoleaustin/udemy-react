@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import './App.css';
 import Button from "./components/UI/Button/Button";
@@ -12,9 +12,9 @@ function App() {
     // You can use this to see that ONLY the elements that are effected are updated / re-rendered on the real dom.
     console.log('app running')
 
-    const toggleParaHandler = () => {
+    const toggleParaHandler = useCallback(() => {
         setShowParagraph((prevShowParagraph) => !prevShowParagraph);
-    }
+    }, [])
 
   return (
     <div className="app">
