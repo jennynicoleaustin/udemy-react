@@ -37,4 +37,7 @@ How to use it?
   - if empty 
     - we are telling react to store the function as is and do not make any updates to the function under any circumstances 
   - If including a state as a dependency 
-    - you are telling React that you should update the function if and only if the state of the given dependencies changes. Other wise do not update the function 
+    - you are telling React that you should update the function if and only if the state of the given dependencies changes. Otherwise, do not update the function 
+
+V. 158 State & Components 
+In terms of re-rendering components state is key  
