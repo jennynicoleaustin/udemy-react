@@ -18,3 +18,6 @@ Components vs the Real DOM
   - this happens only in memory and is not very performance heavy
 - Real DOM
   - difference for the real dom are only re-rendered when there are changes. not every time the component is reevaluated.
+
+V. 153 Child Component Re-rendering 
+- If the parent component is re-evaluated the child component will rerender even if no elements on the child component change
