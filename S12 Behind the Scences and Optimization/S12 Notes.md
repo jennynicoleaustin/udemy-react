@@ -33,3 +33,8 @@ useCallback()
 - stores the function in react memory and calls on that specific function when it needs to be reused rather than needing to recreate it every time. 
 How to use it? 
 - pass out function as a first argument to the useCallback function
+- the second argument should be the dependencies required. 
+  - if empty 
+    - we are telling react to store the function as is and do not make any updates to the function under any circumstances 
+  - If including a state as a dependency 
+    - you are telling React that you should update the function if and only if the state of the given dependencies changes. Other wise do not update the function 
