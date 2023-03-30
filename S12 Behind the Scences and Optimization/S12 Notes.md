@@ -41,3 +41,7 @@ How to use it?
 
 V. 158 State & Components 
 In terms of re-rendering components state is key  
+
+V. 159 State Scheduling and Batching
+- How React handles state updates
+  - 
