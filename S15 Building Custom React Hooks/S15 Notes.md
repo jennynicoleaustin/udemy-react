@@ -3,3 +3,9 @@ V. 186 What are custom Hooks
   - can contain stateful logic into reusable functions
 - custom hooks can use other React hooks and React state
 Allows you to outsource logic into a custom hook that you can then call from the various components
+
+V. 187 Creating a custom hook function 
+- use case for custom hooks 
+  - repeated code that can be refactored to be a hook rather than a component that is changed via props 
+
+Hooks should only be used in react component functions or in custom hooks 
