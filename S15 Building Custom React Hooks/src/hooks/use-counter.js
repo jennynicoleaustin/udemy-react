@@ -10,7 +10,7 @@ const useCounter = () => {
 
         return () => clearInterval(interval);
     }, []);
-
+    // returns the number that is
+    return counter;
 };
-
-export default useCounter()
+export default useCounter();
