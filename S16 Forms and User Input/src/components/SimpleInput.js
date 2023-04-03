@@ -3,43 +3,33 @@ import {useEffect, useRef, useState} from "react";
 const SimpleInput = (props) => {
 
     const [enteredName, setEnteredName] = useState('');
-    const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
-    const [enteredNameTouched, setEnteredNameIsTouched] = useState(true);
-    // const nameInputRef = useRef();
+    const [enteredNameTouched, setEnteredNameIsTouched] = useState(false);
 
-    useEffect(() => {
-        if (enteredNameIsValid) {
-            console.log('Valid name input')
-        }
-    }, [enteredNameIsValid])
+    const enteredNameIsValid = enteredName.trim() !== '';
+    const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
-    const nameInputBlurHandler = event => {
-        setEnteredNameIsTouched(true);
-        if (enteredName.trim() === '') {
-            setEnteredNameIsValid(false);
-            return;
-        }
-    }
 
     const nameInputChangeHandler = event => {
         setEnteredName(event.target.value);
     }
+    const nameInputBlurHandler = event => {
+        setEnteredNameIsTouched(true);
+    }
+
 
     const formSubmissionHandler = event => {
         event.preventDefault();
 
         setEnteredNameIsTouched(true);
-        if (enteredName.trim() === '') {
-            setEnteredNameIsValid(false);
+        if (!enteredNameIsValid) {
             return;
         }
-        setEnteredNameIsValid(true);
         console.log(enteredName);
-        // const enteredValue = nameInputRef.current.value
+        // It is not making it to this code. Why?
         setEnteredName('');
+        setEnteredNameIsTouched(false);
     }
 
-    const nameInputIsInvalid = !enteredNameIsValid && enteredNameTouched;
 
     const nameInputClasses = nameInputIsInvalid ? 'form-control invalid' : 'form-control';
 
@@ -48,7 +38,6 @@ const SimpleInput = (props) => {
             <div className={nameInputClasses}>
                 <label htmlFor='name'>Your Name</label>
                 <input
-                    // ref={nameInputRef}
                     type='text'
                     id='name'
                     onChange={nameInputChangeHandler}
