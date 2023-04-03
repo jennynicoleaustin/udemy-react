@@ -15,3 +15,12 @@ V. 198
   - BEST OPTION?
     - a combo of lose focus and onchange 
       - lose focus initially and then onchange when a user is fixing an error. 
+
+V. 199 
+Two main ways to fetch a user input 
+- store value in a state variable 
+- ref to fetch data once the user is done typing the data. 
+REF
+- Useful if you only need the data 1x 
+STATE 
+- when you need to reset the input to an empty string
