@@ -35,3 +35,7 @@ V. 202
 
 V. 203 
 - handling case : if user type input, then deletes input, and moves away from the input. 
+
+V. 210 Summary 
+- libraries available for form validation 
+  - Formik (a little older but useful for reducing form code and handling complex forms)
