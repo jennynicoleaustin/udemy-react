@@ -29,3 +29,7 @@ V. 200 Basic Validation
 - Rules of validation.. 
   - validation client side should be used for improving the user experience 
   - validation should be done server side because the client side code can always be edited in the browser.
+
+V. 202 
+- setting the initial value to true when it is not true...
+- 
