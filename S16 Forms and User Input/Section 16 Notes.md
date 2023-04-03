@@ -32,4 +32,6 @@ V. 200 Basic Validation
 
 V. 202 
 - setting the initial value to true when it is not true...
-- 
+
+V. 203 
+- handling case : if user type input, then deletes input, and moves away from the input. 
