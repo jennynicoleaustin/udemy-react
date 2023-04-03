@@ -24,3 +24,8 @@ REF
 - Useful if you only need the data 1x 
 STATE 
 - when you need to reset the input to an empty string
+
+V. 200 Basic Validation 
+- Rules of validation.. 
+  - validation client side should be used for improving the user experience 
+  - validation should be done server side because the client side code can always be edited in the browser.
