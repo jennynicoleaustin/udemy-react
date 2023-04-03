@@ -14,3 +14,15 @@ V. 328 Adding Lazy Loading to our Application
 V. 329 Building the Code for Production
 - npm run build 
   - provides an optimized transformed build ready to be uploaded to a server 
+
+V. 330 Deployment
+- A React SPA is a static website (only html, css, js)
+- only need a static site host
+attaching the project 
+- init from project root
+  - this is the BUILD folder 
+  - you will need to rewrite all urls to index.js 
+
+V. 331 Configuration for a SPA and deployment
+- react router dom = client side execution
+- forward all url requests to index.html
