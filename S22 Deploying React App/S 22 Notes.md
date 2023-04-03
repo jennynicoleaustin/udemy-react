@@ -10,3 +10,7 @@ How is the application & code built without lazy loading
 
 V. 328 Adding Lazy Loading to our Application 
 - the imports are adjusted so that the imports are only loaded as needed. 
+
+V. 329 Building the Code for Production
+- npm run build 
+  - provides an optimized transformed build ready to be uploaded to a server 
