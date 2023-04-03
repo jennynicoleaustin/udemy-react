@@ -7,3 +7,6 @@ What is Lazy Loading & How does it work?
 How is the application & code built without lazy loading
 - with import statements we load code from other files into the file which has the import statement. 
 - when the application is served to the end user all the imports in the files must be resolved before anything is show on the page to the user
+
+V. 328 Adding Lazy Loading to our Application 
+- the imports are adjusted so that the imports are only loaded as needed. 
