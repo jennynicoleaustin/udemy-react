@@ -73,3 +73,25 @@ Which is better to use?
 V. 356 Params for SSG Data Fetching 
 - getStaticProps(context)
   - the context key here does NOT have res or req but DOES have PARAMS
+
+V. 357 Preparing Paths with "getStaticPaths()" 
+- must be exported within a component page when it is a 
+  - dynamic page & you are using getStaticProps 
+
+Using getStaticPaths 
+- with getStaticProps a page is pre-generated during the build process
+  - this means that next.js must pre-generate all the variations of the dynamically rendered page 
+    - in order for this to happen next.js must know what values to pre-generate the pages for. 
+- because these dynamically rendered pages are pre-generated (and if a user enters a path that is not available will receive a 404 error)...
+  - getStaticPaths returns an object that describes all possible paths (values used to dynamically render the pages)
+Must return an object with a paths keys
+  - paths key must be an array with one object per version of the dynamic page
+- Real world scenario = you would dynamically render the possible object values from a database rather than hard coding them 
+
+Needs a fallback key 
+- False 
+  - means that the paths array contains all possible dynamic values and entering a value not in the paths array will result in a 404 error
+- True 
+  - user enters value not in the paths array
+    - next.js will try to generate a page dynamically for the incoming request. 
+- Fallback allows you to pre-generate pages for the most common details pages and allows you to dynamically render the other pages 
