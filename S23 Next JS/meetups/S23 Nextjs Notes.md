@@ -69,3 +69,7 @@ Which is better to use?
   - guaranteed to run on every incoming request
     - downside is that you need to wait for the data to be loaded/pre-rendered every time. 
     - useful when you can code that updates all the time, but cumbersome if your data only updates at given intervals or rarely. 
+
+V. 356 Params for SSG Data Fetching 
+- getStaticProps(context)
+  - the context key here does NOT have res or req but DOES have PARAMS
