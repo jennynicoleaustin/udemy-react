@@ -11,5 +11,9 @@ _app.js
   - Component holds the actual content to be rendered by next 
   - pages = any props that the pages may be getting. 
 
-If you have a element you want wrapped around all pages include it on the _app.js file 
+If you have an element you want wrapped around all pages include it on the _app.js file 
 
+V. 350 
+- router.push 
+  - pushes a page onto the stack 
+    - equivalent to using a Link 
