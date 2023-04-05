@@ -37,3 +37,15 @@ V. 353
 
 This moves the loading of the data to the build process side 
 - (similar behavior to if it was being handled server side because none of the data is loaded/fetched client side in the browser)
+
+V. 354 
+Potential problems with using getStaticProps()
+- Outdated data? 
+  - the data in this function is generated during the build process so if we generate new data the source code would not reflect the updates 
+- revalidate property! 
+  - unlocks Incremental static generation 
+  - expects a number 
+    - number of seconds, to wait until regenerating the page
+      - ... when there are requests for the page
+    - how often does the data change? 
+      - base your number off the frequency which your data changes. 
