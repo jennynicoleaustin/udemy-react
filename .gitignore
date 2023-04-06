@@ -2,3 +2,4 @@
 /S19 Advanced Redux/node_modules/
 /S20 - React Router Advance Project/node_modules/
 node_modules
+.env
