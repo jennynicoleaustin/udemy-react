@@ -69,4 +69,17 @@ V. 158 A Closer Look At State & Components
 - React ensures that useState and the default value you initial assign to useState is only considered once (despite the re-evaluations)
 - When a component is initially evaluated React creates the state and assigns in the default value. 
   - for subsequent re-evaluations, React recognizes that the state object for that component already exists and in turn only UPDATES the state, rather than replaces it with a new object (as is done with other objects created by functions) 
-- 
+
+
+V. 159 Understanding State Scheduling and Batching
+How does React handle state updates? 
+- state is not automatically updated with setStateName is run...
+  - instead React schedules a state update with the new data
+  - most of the time the "scheduling" is very fast and feels "instant"
+    - if React considers other tasks to have a higher priority...
+      - it may postpone the state update... however 
+        - react will keep the order of state updates if multiple state updates for the same state object/type are received. 
+- !!!! If your state update depends on the previous state snapshot 
+  - must use the function form of the state update. 
+    - setStateName((prevStateName) => !prevStateName);
+      - this will ensure that react checks the previous state update before completing the new state update. 
