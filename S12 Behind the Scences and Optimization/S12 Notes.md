@@ -55,8 +55,18 @@ V. 157 A First Summary
         - avoid unnecessary re-evaluations by using React.memo()
           - to specify what components to re-evaluate 
     - re-evaluation of functions within that component will create new function objects 
-      - which could result in unwanted side effects.
-  - useCallback = store the function value and do not reevaluate it when the component function runs again as long as [stated] dependencies did not change.
+      - which could result in unwanted side effects?
+  - useCallback = store the function value and do not reevaluate it when the component function runs again as long as (stated) dependencies did not change.
 
-If the app function runs again when the state changes doesnt that mean we are always reinitializing our state? 
-- Why doesnt that cause a problem?
+If the app function runs again when the state changes, doesn't that mean we are always reinitializing our state? 
+- Why does that not cause a problem?
+
+V. 158 A Closer Look At State & Components 
+
+- Interactions between state and components are handled (by React) with the useState hook. 
+- useState creates a new slice of state and attaches to a component. 
+  - react manages this slice and ties it to the component for you behind the scene.
+- React ensures that useState and the default value you initial assign to useState is only considered once (despite the re-evaluations)
+- When a component is initially evaluated React creates the state and assigns in the default value. 
+  - for subsequent re-evaluations, React recognizes that the state object for that component already exists and in turn only UPDATES the state, rather than replaces it with a new object (as is done with other objects created by functions) 
+- 
