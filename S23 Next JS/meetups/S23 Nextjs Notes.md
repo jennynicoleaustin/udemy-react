@@ -124,3 +124,5 @@ find() method for mongoDB
 - be default finds all the documents in the collection 
   - async, returns a promise 
 
+V. 362 Getting Meetup Details Data
+- find({define search criteria data})
