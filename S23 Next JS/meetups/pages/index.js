@@ -1,21 +1,5 @@
 import MeetupList from "@/components/meetups/MeetupList";
-
-const DUMMY_MEETUPS = [
-    {
-        id: 'm1',
-        title: 'First meetup',
-        image: 'https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_334,q_75,w_579/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/DF_080731_7852a_40967E44-7BCD-4FD2-A1C02A47169A341F_df754733-c75b-bd9d-45a7fd6763a2a2d6.jpg',
-        address: '123 Main St. ',
-        description: 'this is the first meetup'
-    },
-    {
-        id: 'm2',
-        title: 'Second meetup',
-        image: 'https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_334,q_75,w_579/https://assets.simpleviewinc.com/simpleview/image/upload/crm/newyorkstate/DF_080731_7852a_40967E44-7BCD-4FD2-A1C02A47169A341F_df754733-c75b-bd9d-45a7fd6763a2a2d6.jpg',
-        address: '124 Main St. ',
-        description: 'this is the second meetup'
-    }
-]
+import { MongoClient } from 'mongodb'
 
 
 function HomePage(props) {
@@ -38,11 +22,25 @@ function HomePage(props) {
 // }
 
 export async function getStaticProps() {
+    const client = await MongoClient.connect(process.env.MONGO_DB_URL)
+    const db = client.db();
+
+    const meetupsCollection = db.collection('meetups');
+
+    const meetups = await meetupsCollection.find().toArray();
+
+    await client.close();
+
     return {
         props: {
-            meetups: DUMMY_MEETUPS
+            meetups: meetups.map((meetup) => ({
+                title: meetup.data.title,
+                address: meetup.data.address,
+                image: meetup.data.image,
+                id: meetup._id.toString()
+            })),
         },
-        revalidate: 10
+        revalidate: 1
     }
 }
 

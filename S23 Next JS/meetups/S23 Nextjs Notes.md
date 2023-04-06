@@ -113,3 +113,14 @@ V. 359 Working with MongoDB
 V. 360 Sending HTTP requests to our internal API 
 - internal API 
   - so we construct an absolute path when constructing the HTTP fetch request. 
+
+V. 361 Getting Data from the database
+- In Nest projects you can use fetch() in server side code 
+  - unlike typically when fetch is a browser/client side only function
+- However, since out API is within the same project we can access the information directly and do not need to make a separate http request. 
+- When you import something into a page component that is only used in the getStaticProps function it will not be included in the client side bundle.
+
+find() method for mongoDB 
+- be default finds all the documents in the collection 
+  - async, returns a promise 
+
