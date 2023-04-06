@@ -39,9 +39,24 @@ How to use it?
   - If including a state as a dependency 
     - you are telling React that you should update the function if and only if the state of the given dependencies changes. Otherwise, do not update the function 
 
-V. 158 State & Components 
-In terms of re-rendering components state is key  
+V. 157 A First Summary
+- React = component based 
+  - job of components in React is to return JSX code (describing the output of that component)
+- State, props, context 
+  - props and context all come down to state changes 
+  - to make changes to a component or data, or parts of the application 
+  - when you make changes to the state, the component where those state changes were made is re-evaluated
+  - re-evaluated = the component function is executed again. 
+    - resulting in a new output (could be the same as previously or different based on the state change)
+      - react compares the latest function evaluation to the previous evaluations result (completed for all affected components )
+        - then hands off any changes (differences) to React DOM (to render the changes)
+          - react DOM takes those changes and applies them to the real browser DOM 
+      - re-evaluation occurs on the component and all components that are rendered within that component. 
+        - avoid unnecessary re-evaluations by using React.memo()
+          - to specify what components to re-evaluate 
+    - re-evaluation of functions within that component will create new function objects 
+      - which could result in unwanted side effects.
+  - useCallback = store the function value and do not reevaluate it when the component function runs again as long as [stated] dependencies did not change.
 
-V. 159 State Scheduling and Batching
-- How React handles state updates
-  - 
+If the app function runs again when the state changes doesnt that mean we are always reinitializing our state? 
+- Why doesnt that cause a problem?
