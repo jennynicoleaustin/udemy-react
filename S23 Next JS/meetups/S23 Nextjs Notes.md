@@ -109,3 +109,7 @@ V. 359 Working with MongoDB
 - It is safe to add a password into the api folder files, since this will only ever run server-side 
   - HOWEVER!!!! Don't forget about Git so safer to add into a .env file 
 - *** add try/catch to handle errors 
+
+V. 360 Sending HTTP requests to our internal API 
+- internal API 
+  - so we construct an absolute path when constructing the HTTP fetch request. 

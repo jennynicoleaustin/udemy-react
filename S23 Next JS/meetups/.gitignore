@@ -36,3 +36,4 @@ yarn-error.log*
 
 next.config.js
 /api/
+/pages/api/new-meetup.js
