@@ -126,3 +126,10 @@ find() method for mongoDB
 
 V. 362 Getting Meetup Details Data
 - find({define search criteria data})
+
+V. 363 Metadata
+- before deploying check your metadata? 
+  - What is missing? 
+    - description (shows up as the description when page is shown in a Google search )
+    - page title
+- 

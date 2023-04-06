@@ -1,11 +1,20 @@
 import MeetupList from "@/components/meetups/MeetupList";
 import { MongoClient } from 'mongodb'
+import Head from "next/head";
 
 
 function HomePage(props) {
     return (
-        <MeetupList meetups={props.meetups}/>
-
+        <>
+            <Head>
+              <title>Next.js Meetups</title>
+                <meta
+                    name="description"
+                    content="awesome meetup page"
+                />
+            </Head>
+            <MeetupList meetups={props.meetups}/>
+        </>
     )
 }
 // This function is better for data that changes constantly
