@@ -95,3 +95,12 @@ Needs a fallback key
   - user enters value not in the paths array
     - next.js will try to generate a page dynamically for the incoming request. 
 - Fallback allows you to pre-generate pages for the most common details pages and allows you to dynamically render the other pages 
+
+V. 358 Intro to API Routes 
+- Next.js allows you to create a backend within the same project by using the API routes folder 
+- within the pages folder 
+  - folder named api 
+    - Next will take any JS files within the api folder and convert them into api routes. 
+      - end points that can be targeted by requests and return and receive JSON data
+- files within the api folder are NOT react components 
+  - functions that contain server side logic 
