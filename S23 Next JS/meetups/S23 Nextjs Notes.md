@@ -104,3 +104,8 @@ V. 358 Intro to API Routes
       - end points that can be targeted by requests and return and receive JSON data
 - files within the api folder are NOT react components 
   - functions that contain server side logic 
+
+V. 359 Working with MongoDB
+- It is safe to add a password into the api folder files, since this will only ever run server-side 
+  - HOWEVER!!!! Don't forget about Git so safer to add into a .env file 
+- *** add try/catch to handle errors 
