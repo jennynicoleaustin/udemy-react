@@ -132,4 +132,13 @@ V. 363 Metadata
   - What is missing? 
     - description (shows up as the description when page is shown in a Google search )
     - page title
-- 
+
+V. 365 Using Fallback Pages and Re-deploying
+- with fallback set to false, any meetup id's that were not available at time of deployment ( when the pages were pre-generated ) will give a 404 error 
+  - not great if new meetups are added. 
+- blocking & true
+  - set fallback to "blocking" (or true)
+  - pages will be pre-generated as needed
+- differences between true & blocking 
+  - true: immediately returns a black page and then pulls down the pre-generated page once it is done being created. 
+  - blocking: user will not see anything until the page is finished being pre-generated 
