@@ -35,5 +35,3 @@ yarn-error.log*
 /.idea/vcs.xml
 
 next.config.js
-/api/
-/pages/api/new-meetup.js
