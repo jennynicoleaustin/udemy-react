@@ -83,3 +83,14 @@ How does React handle state updates?
   - must use the function form of the state update. 
     - setStateName((prevStateName) => !prevStateName);
       - this will ensure that react checks the previous state update before completing the new state update. 
+
+V. 160 Optimizing with useMemo()
+- useCallback = store function objects and only rebuild when some input changes
+- useMemo() = similar for all other types of data
+  - allows you to "memoize" aka store any kind of data 
+Using useMemo()
+  - first argument = a function that returns the data you want to store
+  - second argument = array of dependencies.
+    - ensures that the value stored in useMemo is updated when one of the values stored inside the useMemo function is updated
+- When should you implement useMemo? 
+  - when it would be performance intensive to recreate the data (ie when making sorted lists)
