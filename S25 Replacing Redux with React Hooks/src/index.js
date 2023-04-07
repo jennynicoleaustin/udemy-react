@@ -14,11 +14,12 @@ const rootReducer = combineReducers({
 
 const store = createStore(rootReducer);
 
-ReactDOM.render(
+const root = document.getElementById('root');
+
+root.render(
   <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root')
 );
