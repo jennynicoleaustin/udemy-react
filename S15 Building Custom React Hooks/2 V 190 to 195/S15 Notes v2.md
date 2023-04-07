@@ -8,5 +8,3 @@ V. 191 Building a Custom Http Hook
 Steps to creating custom hooks 
 - What elements of the function do you want to be "configurable"? (aka flexible)
 
-V. 192 Using the Custom Http Hook 
-- 
