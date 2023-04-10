@@ -16,4 +16,4 @@ V. 390
 - create global variables (within the file) to be used in useState 
   - by creating them before, outside the scope of the hook, they will only be created once when the file is imported into a component, and then updated within the useState.
 
-V. 391 Finishing up the Store Hook 
+V. 392 Creating a Concrete Store
