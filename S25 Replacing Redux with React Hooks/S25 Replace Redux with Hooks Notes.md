@@ -17,3 +17,4 @@ V. 390
   - by creating them before, outside the scope of the hook, they will only be created once when the file is imported into a component, and then updated within the useState.
 
 V. 392 Creating a Concrete Store
+
