@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e526621-6edb-4243-b609-38b0a80892b1" name="Changes" comment="S26: Testing React Apps (Unit Tests)&#10;-&gt; Starter Project added" />
+    <list default="true" id="2e526621-6edb-4243-b609-38b0a80892b1" name="Changes" comment="S26: Testing React Apps (Unit Tests)&#10;-&gt; Notes added">
+      <change afterPath="$PROJECT_DIR$/S26 Testing React Apps Notes.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,21 +12,27 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2OFRXkm6E7OzWvEmBStHA8tMSJZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/jennifer.austin/WebstormProjects/udemy-react/S26 Testing React Apps",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jennifer.austin/WebstormProjects/udemy-react/S26 Testing React Apps&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -34,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681154384615</updated>
       <workItem from="1681154385708" duration="111000" />
+      <workItem from="1681154690880" duration="260000" />
     </task>
     <task id="LOCAL-00001" summary="S26: Testing React Apps (Unit Tests)&#10;-&gt; Starter Project added">
       <created>1681154446638</created>
@@ -49,7 +58,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681154489295</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="S26: Testing React Apps (Unit Tests)&#10;-&gt; Notes added">
+      <created>1681154949967</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681154949967</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -57,6 +73,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="S26: Testing React Apps (Unit Tests)&#10;-&gt; Starter Project added" />
-    <option name="LAST_COMMIT_MESSAGE" value="S26: Testing React Apps (Unit Tests)&#10;-&gt; Starter Project added" />
+    <MESSAGE value="S26: Testing React Apps (Unit Tests)&#10;-&gt; Notes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="S26: Testing React Apps (Unit Tests)&#10;-&gt; Notes added" />
   </component>
 </project>
