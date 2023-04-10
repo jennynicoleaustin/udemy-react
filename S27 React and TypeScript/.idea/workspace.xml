@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6637cb7c-a6a7-4769-b013-b5adc609a9a3" name="Changes" comment="gitignore">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="6637cb7c-a6a7-4769-b013-b5adc609a9a3" name="Changes" comment="Section 27: TypeScript &amp; React &#10;-&gt; Notes.md Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +12,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OFRozKWZ3rcviuasFIeRPCJRN7" />
   <component name="ProjectLevelVcsManager">
@@ -26,6 +30,10 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/jennifer.austin/WebstormProjects/udemy-react/S27 React and TypeScript",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -39,6 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681154521370</updated>
       <workItem from="1681154522451" duration="66000" />
+      <workItem from="1681154971727" duration="399000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1681154587064</created>
@@ -47,7 +56,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681154587064</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Section 27: TypeScript &amp; React &#10;-&gt; Notes.md Added">
+      <created>1681155365903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681155365903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -55,6 +71,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Section 27: TypeScript &amp; React &#10;-&gt; Notes.md Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Section 27: TypeScript &amp; React &#10;-&gt; Notes.md Added" />
   </component>
 </project>
