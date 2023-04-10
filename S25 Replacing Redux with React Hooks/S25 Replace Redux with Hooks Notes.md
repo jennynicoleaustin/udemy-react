@@ -27,3 +27,5 @@ V. 392 Creating the Concrete Store
 V. 393 Using the Custom Store
 
 V. 394 Custom Hook Store Summary
+
+V. 395 Optimizing the Custom Hook Store
