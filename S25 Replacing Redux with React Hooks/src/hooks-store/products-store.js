@@ -2,7 +2,7 @@ import {initStore} from "./store";
 
 const configureStore = () => {
     const actions = {
-        toggleFav: (curState, productId) => {
+        TOGGLE_FAV: (curState, productId) => {
             const prodIndex = curState.products.findIndex(p => p.id === productId);
             const newFavStatus = !curState.products[prodIndex].isFavorite;
             const updatedProducts = [...curState.products];
@@ -10,10 +10,11 @@ const configureStore = () => {
                 ...curState.products[prodIndex],
                 isFavorite: newFavStatus
             };
-            return { products: updatedProducts }
+            return {products: updatedProducts};
         }
-    }
-    initStore(actions, { products: [
+    };
+    initStore(actions, {
+        products: [
             {
                 id: 'p1',
                 title: 'Red Scarf',
@@ -38,7 +39,8 @@ const configureStore = () => {
                 description: 'Street style! An orange hat.',
                 isFavorite: false
             }
-        ]})
+        ]
+    });
 };
 
 export default configureStore;
